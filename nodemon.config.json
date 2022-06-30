@@ -1,0 +1,17 @@
+{
+  "ignore": [
+    ".git",
+    "node_modules/**/node_modules"
+  ],
+  "env": {
+    "PORT": 3010,
+    "APP_DOMAIN": "www.gsdiamonds.com.au",
+    "NODE_ENV": "development",
+    "API_URL": "https://api.gsdevelop.run",
+    "HOSTNAME": "https://gsdevelop.run",
+    "SITEMAP_PATH": "https://s3.eu-central-1.amazonaws.com/develop-diamond-media/sitemap",
+    "SEO_INDEX": 0,
+    "PRERENDER_TOKEN": "",
+    "REDIS_HOST": ""
+  }
+}

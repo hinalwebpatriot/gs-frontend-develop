@@ -1,0 +1,17 @@
+User-agent: *
+Disallow: /auth/
+Disallow: /search/
+Disallow: /checkout/
+Disallow: /favorite
+Disallow: /favorite/
+Disallow: /compare
+Disallow: /compare/
+Disallow: /diamonds/product
+Disallow: /diamonds/product/
+Disallow: /completed-rings/
+Disallow: /blog/tag/
+Allow: /static/js/*.js
+Allow: /static/css/*.css
+Allow: /static/media/*.png
+Allow: /static/media/*.jpg
+Sitemap: https://www.gsdiamonds.com.au/sitemap.xml

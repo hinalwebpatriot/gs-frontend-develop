@@ -1,0 +1,4 @@
+!**/src/*
+/src/components/StaticPages/*
+/src/utils/validation.js
+/src/utils/notification.js

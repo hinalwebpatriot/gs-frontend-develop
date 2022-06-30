@@ -1,0 +1,1 @@
+export const citySelector = state => state.shared.city;

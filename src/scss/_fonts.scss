@@ -1,0 +1,109 @@
+//@font-face {
+//  font-family: "Botdoh";
+//  src: url('../fonts/Botdoh.woff2') format('woff2'),
+//    url('../fonts/Botdoh.woff') format('woff'),
+//    url("../fonts/Botdoh.otf") format("opentype"),
+//    url("../fonts/Botdoh.ttf") format("truetype");
+//  font-weight: 400;
+//  font-style: normal;
+//  font-display: swap;
+//}
+
+@font-face {
+  font-family: "Lucida Grande";
+  src:
+          url("../fonts/LucidaGrande.woff2") format("woff2"),
+          url("../fonts/LucidaGrande.woff") format("woff"),
+          url("../fonts/LucidaGrande.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Snell Roundhand Black";
+  src: url("../fonts/SnellBlack.woff") format("woff"), url("../fonts/SnellBlack.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "PinyonScript-Regular";
+  src:
+          url("../fonts/PinyonScript-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto-Medium";
+  src:
+          url("../fonts/Roboto-Medium.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto-Bold";
+  src:
+          url("../fonts/Roboto-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Raleway";
+  src: url("../fonts/Raleway-Medium.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+// @font-face {
+//   font-family: "Playfair Display";
+//   src: url("../fonts/PlayfairDisplay/PlayfairDisplay-Regular.ttf") format("truetype");
+//   font-weight: normal;
+//   font-style: normal;
+//   font-display: swap;
+// }
+
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("../fonts/Lato/woff2/Lato-Light.woff2") format('woff2');
+}
+
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/Lato/woff2/Lato-Regular.woff2") format('woff2');
+}
+
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../fonts/Lato/woff2/Lato-Bold.woff2") format('woff2');
+}
+
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/PlayfairDisplay/woff2/PlayfairDisplay.woff2") format('woff2');
+}
+
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../fonts/PlayfairDisplay/woff2/PlayfairDisplay.woff2") format('woff2');
+}

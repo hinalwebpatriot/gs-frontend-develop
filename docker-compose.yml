@@ -1,0 +1,19 @@
+version: "3.3"
+services:
+  frontend:
+    environment:
+       - ENVIRONMENT={FRONTEND_ENV}
+    ports:
+      - "3001:3000"
+    image: registry.gitlab.com/gsdiamondscore/frontend:{IMAGE_TAG}
+    volumes:
+      - './ecosystem.config.js:/opt/app/ecosystem.config.js'
+      - './robots.txt:/opt/app/public/robots.txt'
+    restart:
+      unless-stopped
+    networks:
+      - diamond
+    
+networks:
+  diamond:
+    driver: bridge

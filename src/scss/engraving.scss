@@ -1,0 +1,140 @@
+.engraving-block {
+    position: relative;
+
+    .product-engraving__title {
+        color: #ef4056;
+        cursor: pointer;
+        margin-top: 12px;
+        font-weight: bold;
+    }
+
+    .engraving-panel {
+        position: absolute;
+        width: 270px;
+        z-index: 6;
+        display: none;
+        top: 30px;
+        background-color: white;
+        border: 1px solid rgb(210, 210, 210);
+        padding: 12px;
+        flex-direction: column;
+        color: rgb(27, 27, 27);
+        font-size: 12px;
+        &.open {
+            display: flex;
+        }
+        &__header {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 12px;
+            .space-between {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                span {
+                    color: inherit;
+                    font-size: inherit;
+                }
+                .close-panel {
+                    height: 14px;
+                    width: 14px;
+                    padding: 0 3px;
+                    background-color: #595959;
+                    svg {
+                        position: relative;
+                        top: -2px;
+                        fill: white;
+                    }
+                }
+            }
+            .engraving-input {
+                width: 100%;
+                margin-top: 4px;
+                padding: 2px 4px;
+                border: 1px solid rgb(187, 187, 187);
+            }
+            .count-text {
+                display: flex;
+                align-self: flex-end;
+                color: rgb(148, 148, 148);
+                font-size: 10px;
+            }
+        }
+        &__body {
+            .choose-font {
+                margin-top: 5px;
+                .input-font {
+                    border: 1px solid transparent;
+                    &:first-child {
+                        margin-right: 7px;
+                    }
+                    &.selected {
+                        border: 1px solid rgb(148, 148, 148);
+                    }
+                }
+            }
+        }
+        &__footer {
+            display: flex;
+            flex-direction: column;
+            .preview-title {
+                text-align: center;
+                margin-bottom: 3px;
+            }
+            .preview-img {
+                display: flex;
+                height: 120px;
+                text-align: center;
+                justify-content: center;
+                border: 1px solid rgb(210, 210, 210);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-image: url('https://ion.r2net.com/Images/Checkout/Inscription.png');
+                .engraving-text {
+                    font-size: 16px;
+                    letter-spacing: 1px;
+                    font-family: 'Lucida Sans';
+                    span {
+                        &.span-inner {
+                            line-height: 40px;
+                        }
+                        color: #666;
+                        transition: 0s;
+                        display: inline-block;
+                        font-family: inherit;
+                        .opacity0 {
+                            opacity: 0;
+                        }
+                    }
+                }
+            }
+            .save-inscription {
+                color: white;
+                display: flex;
+                cursor: pointer;
+                font-size: 10px;
+                margin-top: 12px;
+                padding: 4px 16px;
+                text-align: center;
+                align-self: flex-end;
+                text-transform: uppercase;
+                background-color: #fd6478;
+                &:hover {
+                    background-color: #ef4056;
+                }
+                &:active {
+                    background-color: #fd6478;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .engraving-block {
+        .engraving-panel {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+}
