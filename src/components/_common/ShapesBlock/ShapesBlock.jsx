@@ -23,7 +23,7 @@ class ShapesBlock extends React.Component {
       pageCategory = 'diamonds/';
     }
     const template = (
-      <div className="occasion-section test">
+      <div className="occasion-section">
         <div className="row no-gutters">
           <div
             className={`occasion-section__container col-12 col-lg-6 ${page === "feed" ? "sm-hide" : ""}`}

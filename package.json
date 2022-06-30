@@ -2,7 +2,7 @@
   "name": "diamonds_front_with_ssr",
   "version": "0.8.0",
   "private": true,
-  "proxy": "https://api.gsdiamonds.com.au",
+  "proxy": "https://gsd.envertis.solutions/",
   "dependencies": {
     "@fortawesome/fontawesome-free-brands": "^5.0.13",
     "@fortawesome/fontawesome-svg-core": "^1.2.27",
@@ -39,6 +39,7 @@
     "newrelic": "^6.14.0",
     "node-html-parser": "^1.2.12",
     "nodejs-base64": "^1.0.3",
+    "pm2": "^5.2.0",
     "prerender-node": "^3.4.1",
     "qs": "^6.9.1",
     "react": "^16.13.0",
@@ -70,7 +71,8 @@
     "reselect": "^4.0.0",
     "safe-buffer": "^5.2.1",
     "sanitize-html": "^1.22.0",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "webpack": "^4.29.6"
   },
   "devDependencies": {
     "@babel/core": "^7.12.10",
@@ -98,12 +100,13 @@
     "mime-types": "^2.1.25",
     "mini-css-extract-plugin": "0.8.0",
     "monkey-react-scripts": "0.2.1",
+    "node-sass": "^4.14.1",
     "nodemon": "^1.19.4",
     "prettier": "1.15.2",
     "redux-devtools-extension": "^2.13.5"
   },
   "scripts": {
-    "start": "monkey-react-scripts start",
+    "start": "BROWSER=none monkey-react-scripts start",
     "build": "monkey-react-scripts build",
     "test": "monkey-react-scripts test",
     "eject": "react-scripts eject",

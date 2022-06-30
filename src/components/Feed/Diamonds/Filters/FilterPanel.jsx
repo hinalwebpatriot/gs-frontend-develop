@@ -145,7 +145,6 @@ export default class FilterPanel extends React.Component {
                   type="shapes"
                   input={shapes}
                   save={saveDiamondsShape}
-                  toggle={toggleDiamondsFilter}
                   disabled={RingConstructor.settingId}
                   video={{
                     category: "diamonds",

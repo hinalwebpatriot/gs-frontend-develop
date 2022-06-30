@@ -4,7 +4,7 @@ import {
   enableDiamondsFilterTriple,
   disableDiamondsFilterTriple
 } from "../../DiamondsFeedActions";
-import { diamondsFeedFilterTripleSelector, diamondsFeedInputDataSelector } from "../../../../_selectors/diamondsFeedSelectors";
+import { diamondsFeedFilterTripleSelector } from "../../../../_selectors/diamondsFeedSelectors";
 import CustomTooltip from "../../../../_common/CustomTooltip";
 
 class CheckboxTripleExcellent extends React.Component {
@@ -15,18 +15,17 @@ class CheckboxTripleExcellent extends React.Component {
   };
 
   render() {
-    const { isTriple, input } = this.props;
-    const isDisabled = input.shapes.length && input.shapes[0] !== 'round'
+    const { isTriple } = this.props;
+
     return (
       <div className="filter-check result-panel__check">
-        <div className={`filter-check__item ${isDisabled ? 'filter-check__item--disabled' : ''}`}>
+        <div className="filter-check__item">
           <input
             type="checkbox"
             id="filt1"
             className="checkbox"
             onChange={this.handleToggle}
             checked={isTriple}
-            disabled={isDisabled}
           />
           <label htmlFor="filt1">
             <span>Triple Excellent</span>
@@ -41,7 +40,6 @@ class CheckboxTripleExcellent extends React.Component {
 const mapStateToProps = (state, props) => ({
   // isExpanded: diamondsFeedFilterExpandSelector(state),
   isTriple: diamondsFeedFilterTripleSelector(state),
-  input: diamondsFeedInputDataSelector(state),
   ...props
 });
 

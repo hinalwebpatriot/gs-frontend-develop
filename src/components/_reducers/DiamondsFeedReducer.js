@@ -219,9 +219,18 @@ const sharedFiltersInput = handleActions(
 const shapesFilterInput = handleActions(
   {
     [actions.saveDiamondsShape.TRIGGER](state, { payload }) {
-      // return toggleItemInArray(state, payload);
+      return toggleItemInArray(state, payload);
+    },
+    [actions.setDiamondsShape.TRIGGER](state, { payload }) {
+      // const shape = payload.toLowerCase();
       const shape = payload.toLowerCase();
       return [shape];
+
+      // if (shapeFilter.includes(shape)) {
+      //
+      // } else {
+      //   return state;
+      // }
     },
     [actions.clearDiamondsFilters.SUCCESS]() {
       return [];

@@ -2855,6 +2855,11 @@ a:focus {
     //     z-index: 1;
     // }
 }
+.height{
+    height: 50px !important;
+    padding: 0;
+    font-size: 2rem;
+}
 
 .home-banner {
     position: relative;
@@ -4583,10 +4588,6 @@ button {
             width: 23px;
             margin-right: 3px;
             padding-right: 0;
-        }
-
-        &--disabled {
-            opacity: 0.5
         }
     }
 }

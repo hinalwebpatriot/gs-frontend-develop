@@ -13,26 +13,14 @@ export default class FilterShapes extends React.Component {
     clear({ type });
   };
 
-  onClick = (slug) => {
-    const { toggle, save, filterChange = () => {}, disabled } = this.props;
-    if (disabled) return;
-
-    save(slug);
-    filterChange();
-    toggle({
-      type: 'cut',
-      isDisabled: slug !== 'round'
-    });
-  }
-
   render() {
-    const { wrapper, video, title, input, disabled } = this.props;
+    const { wrapper, video, title, input, save, disabled, filterChange = () => {} } = this.props;
     const buttons = Object.keys(shapes).map(slug => (
       <button
         type="button"
         key={`shapes_filter_${slug}`}
         className={`filter-shape__item ${input.includes(slug) ? "active" : ""}`}
-        onClick={() => this.onClick(slug)}
+        onClick={!disabled ? () => { save(slug); filterChange() } : undefined}
       >
         <span className="shape-icon">{shapes[slug].image}</span>
         {shapes[slug].title}

@@ -1,13 +1,16 @@
 import axios from 'axios';
 import qs from 'qs';
 
-axios.defaults.baseURL = "https://gsd.envertis.solutions/";
-
+// axios.create({
+//   baseURL: "http://gsd.envertis.solutions/",
+//   timeout: 90000
+// });
+axios.defaults.baseURL = 'https://gsd.envertis.solutions/';
 const createApiRouting = (axiosInstance) => ({
   config: {
-    // getLocales: () => axiosInstance.get('/api/settings/locales'),
-    // getCurrencies: () => axiosInstance.get('/api/settings/currencies'),
-    // getLocations: () => axiosInstance.get('/api/settings/locations'),
+    getLocales: () => axiosInstance.get('/api/settings/locales'),
+    getCurrencies: () => axiosInstance.get('/api/settings/currencies'),
+    getLocations: () => axiosInstance.get('/api/settings/locations'),
     getSettings: () => axiosInstance.get('/api/settings/locations-data'),
     submitSettings: (data) => axiosInstance.post('/api/settings/select-locations', data),
     getMainMenu: () => axiosInstance.get('/api/menu-dropdown'),
@@ -160,7 +163,7 @@ const createApiRouting = (axiosInstance) => ({
     getPhotoSlider: (config) => axiosInstance.get('/api/blocks/slider/diamonds-feed', config),
     getExpertChoice: (config) => axiosInstance.get('/api/seo/blocks/diamonds-expert', config),
     getFirstRingSlider: (config) => axiosInstance.get('/api/engagement-rings-for-diamond', config),
-    getSecondRingSlider: (config) => axiosInstance.get('/api/blocks/second-rings-slider', config)
+    getSecondRingSlider: (config) => axiosInstance.get('/api/blocks/second-rings-slider', config),
     // getDiamondsBanners: () => axiosInstance.get('/api/banners')
   },
   diamond: {

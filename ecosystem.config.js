@@ -25,7 +25,7 @@ module.exports = {
       env_production: {
         PORT: 3000,
         NODE_ENV: "production",
-        API_URL: "https://api.gsdiamonds.com.au",
+        API_URL: "https://gsd.envertis.solutions",
         HOSTNAME: "https://www.gsdiamonds.com.au",
         APP_DOMAIN: "www.gsdiamonds.com.au",
         SITEMAP_PATH: 'https://gsdiamonds-media-sydney.s3-ap-southeast-2.amazonaws.com/sitemap',
@@ -38,7 +38,7 @@ module.exports = {
       env_development: {
         PORT: 3000,
         NODE_ENV: "production",
-        API_URL: "http://api.gsdevelop.run",
+        API_URL: "https://gsd.envertis.solutions",
         HOSTNAME: "https://gsdevelop.run",
         APP_DOMAIN: "www.gsdiamonds.com.au",
         SITEMAP_PATH: 'https://s3.eu-central-1.amazonaws.com/develop-diamond-media/sitemap',

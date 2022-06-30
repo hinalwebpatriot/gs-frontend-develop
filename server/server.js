@@ -24,7 +24,7 @@ app.enable("strict routing");
 app.use(compression());
 app.use(cookieParser());
 
-app.use("/api", proxy({target: API_URL, changeOrigin: true}));
+app.use("/api", proxy({target: "https://gsd.envertis.solutions", changeOrigin: true}));
 app.use("/robots.txt", robotsTxtController);
 app.use("/sitemap.xml", indexSitemapController);
 app.use("/sitemap/:path/:file", sitemapsController);
@@ -49,12 +49,18 @@ let prerenderMiddleware = prerender
     .set('host', APP_DOMAIN)
     .set('protocol', 'https')
     .set('prerenderToken', PRERENDER_TOKEN)
+    .blacklisted([
+        '^/diamonds/product/.*',
+    ])
     .whitelisted(prerenderWhitelist);
 
 let prerenderReCacheMiddleware = prerenderReCache
     .set('host', APP_DOMAIN)
     .set('protocol', 'https')
     .set('prerenderToken', PRERENDER_TOKEN)
+    .blacklisted([
+        '^/diamonds/product/.*',
+    ])
     .whitelisted(prerenderWhitelist);
 
 if (REDIS_HOST) {
